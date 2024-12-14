@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "daycounter",
+  "version": "1.0",
+  "name": "DayCounter",
+  "description": "Ce mod permet de compter les jours depuis le début de votre aventure",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/daycounter/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "org.leseaux.daycounter.client.DaycounterClient"
+    ],
+    "main": [
+      "org.leseaux.daycounter.Daycounter"
+    ]
+  },
+  "mixins": [
+    "daycounter.mixins.json",
+    {
+      "config": "daycounter.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "fabric": "*",
+    "minecraft": "1.21.1"
+  }
+}
